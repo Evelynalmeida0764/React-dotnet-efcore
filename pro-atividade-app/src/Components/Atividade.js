@@ -17,13 +17,13 @@ export default function Atividade(props) {
     function prioridadeStyle(parem, icone){
         switch(parem){
             case '1':
-            return icone ? 'smile' : 'success';
+              return icone ? 'smile' : 'success';
             case '2':
-            return icone ? 'meh' : 'dark';
+              return icone ? 'meh' : 'dark';
             case '3':
-            return icone ? 'frown' : 'warning';
+              return icone ? 'frown' : 'warning';
             default:
-            return 'Não defenida';
+              return 'Não defenida';
         }
     }
 

@@ -4,7 +4,7 @@ import AtividadeForm from './Components/AtividadeForm';
 import AtividadeLista from './Components/AtividadeLista';
 
 
-function App() {
+function App() {      
   const [index, setIndex] = useState(0)
   const [atividades, setAtividades] = useState([]);
   const [atividade, setAtividade] = useState({id :0});
@@ -44,7 +44,7 @@ function App() {
         addAtividade = {addAtividade}
         atualizarAtividade= {atualizarAtividade}
         cancelarAtividade = {cancelarAtividade}
-        ativSelecionada = {atividade} // não entendi tbm
+        ativSelecionada = {atividade} 
         atividades = {atividades}
       />
 

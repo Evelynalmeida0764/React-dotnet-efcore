@@ -52,7 +52,7 @@ export default function AtividadeForm(props) {
    
   return (
     <>
-    <h1>Atividade {atividade !== 0 ? atividade.id : ''}</h1>
+    <h1>Atividade {atividade.id !== 0 ? atividade.id : ''}</h1>
     <form className="row g-3" onSubmit={handleSubmit}>
         <div className="col-md-6">
             <label className="form-label">Titulo</label>
@@ -66,7 +66,7 @@ export default function AtividadeForm(props) {
             />
         </div>
 
-        <div className="col-md-4">
+        <div className="col-md-6">
             <label className="form-label">Prioridade</label>
             <select 
                 id="prioridade" 
@@ -112,7 +112,7 @@ export default function AtividadeForm(props) {
                     className="btn btn-outline-warning" 
                     onClick={handleCancelar} 
                 >   
-                    <i className="fa-solid fa-circle-plus me-2"></i>
+                    <i className="fa-solid fa-xmark me-2"></i>
                     Cancelar 
                 </button>
             </>

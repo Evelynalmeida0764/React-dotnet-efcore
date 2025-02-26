@@ -26,7 +26,7 @@ public class AtividadeController : ControllerBase
         return _context.Atividades.FirstOrDefault(ati => ati.Id == id);
     }
 
-    [HttpPut]
+    [HttpPut("{id}")]
     public Atividade Put(int id, Atividade atividade)
     {
         if(atividade.Id != id) 
@@ -39,12 +39,12 @@ public class AtividadeController : ControllerBase
         return new Atividade();
     }
 
-    [HttpPost("{id}")]
-    public IEnumerable<Atividade> Post(Atividade atividade)
+    [HttpPost]
+    public Atividade Post(Atividade atividade)
     {
         _context.Atividades.Add(atividade);
         if (_context.SaveChanges() > 0)
-            return _context.Atividades;
+            return _context.Atividades.FirstOrDefault(ativ => ativ.Id == atividade.Id);
         else
             throw new Exception("Voce não conseguiu adicionar uma atividade");
     }
